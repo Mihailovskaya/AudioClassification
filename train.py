@@ -1,5 +1,5 @@
 import sys 
-sys.path.insert(0,'/content/AudioClassfication')
+sys.path.insert(0,'/content/AudioClassification')
 from utils.helper_funcs import collate_fn
 import numpy as np
 from modules.soundnet import SoundNetRaw as SoundNet
