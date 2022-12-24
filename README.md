@@ -11,5 +11,17 @@
   8 = siren
   9 = street_music
 
-В ноутбуке храниться все6 что нужно для запуска сети:
-  
+В ноутбуке храниться все, что нужно для запуска сети:
+ 1) скачивание нужных файлов с гита
+ 2) создание сети из файла modules/soundnet.pay
+ 3) создание train/val/test датасета с помощью класса из файла utils/audio_dataset.py наследующего torch.utils.data.Dataset
+ 4) обучение сети через функцию train_net из train.py
+ 5) инференс одного аудио через функцию inference из train.py
+ 6) тест тестового набора данных с помощью функции test из train.py
+ 7) вывод accuracy и loss при обучении 
+ 8) вывод confusion matrix 
+
+В f'result/{run_name}' сохраняется:
+        лучшая сеть net.pkl,
+        costs.txt - записи о train  датасете f'{step}-{acc}-{loss}'
+        costs_test.txt - записи о val датасете f'{step}-{acc}-{loss}'
